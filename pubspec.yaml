@@ -10,6 +10,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  equatable: ^2.0.7
+  flutter_bloc: ^9.1.1
+  hugeicons: ^0.0.11
+  meta: ^1.16.0
+  go_router: ^16.0.0
 
 dev_dependencies:
   flutter_test:
@@ -18,4 +23,13 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: Questrial
+      fonts:
+        - asset: assets/fonts/questrial.ttf
+          weight: 300
   

@@ -1,12 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:helloworld/pantallaprincipal.dart';
+import 'package:go_router/go_router.dart';
 
-class Registro extends StatelessWidget {
-  final TextEditingController nameController = TextEditingController();
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
+class Signup extends StatefulWidget {
+  const Signup({super.key});
 
-  Registro({super.key});
+  @override
+  State<Signup> createState() => _SignupState();
+}
+
+class _SignupState extends State<Signup> {
+  late final TextEditingController _nameController;
+  late final TextEditingController _emailController;
+  late final TextEditingController _passwordController;
+
+  @override
+  void initState() {
+    super.initState();
+    _nameController = TextEditingController();
+    _emailController = TextEditingController();
+    _passwordController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _nameController.dispose();
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,29 +41,26 @@ class Registro extends StatelessWidget {
         child: Column(
           children: <Widget>[
             TextField(
-              controller: nameController,
+              controller: _nameController,
               decoration: const InputDecoration(labelText: 'Nombre completo'),
             ),
             const SizedBox(height: 20),
             TextField(
-              controller: emailController,
+              controller: _emailController,
               decoration: const InputDecoration(
                 labelText: 'Correo electrónico',
               ),
             ),
             const SizedBox(height: 20),
             TextField(
-              controller: passwordController,
+              controller: _passwordController,
               obscureText: true,
               decoration: const InputDecoration(labelText: 'Contraseña'),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (_) => const PantallaPrincipal()),
-                );
+                context.push('/home');
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xffcd7174),
