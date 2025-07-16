@@ -101,12 +101,12 @@ class DashboardPage extends StatelessWidget {
     );
   }
 
-  Widget _buildActivityItem(String text, String time, Color dotColor) {
+  /* Widget _buildActivityItem(String text, String time, Color dotColor) {
     return ListTile(
       leading: Icon(Icons.circle, color: dotColor, size: 12),
       title: Text(text),
       subtitle: Text(time),
       contentPadding: EdgeInsets.zero,
     );
-  }
+  } */
 }

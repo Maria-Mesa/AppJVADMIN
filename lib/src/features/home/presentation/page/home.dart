@@ -4,14 +4,14 @@ import 'package:helloworld/inventario.dart';
 import 'package:helloworld/proveedores.dart';
 import 'package:helloworld/ventas.dart';
 
-class PantallaPrincipal extends StatefulWidget {
-  const PantallaPrincipal({super.key});
+class Home extends StatefulWidget {
+  const Home({super.key});
 
   @override
-  _PantallaPrincipalState createState() => _PantallaPrincipalState();
+  State<Home> createState() => _HomeState();
 }
 
-class _PantallaPrincipalState extends State<PantallaPrincipal> {
+class _HomeState extends State<Home> {
   int index = 0;
   final List<Widget> pages = <Widget>[
     const DashboardPage(),
