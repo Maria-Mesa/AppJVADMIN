@@ -11,8 +11,7 @@ class _AccountingPageState extends State<AccountingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Accounting')),
-      body: const Center(child: Text('Accounting Page')),
+      body: ListView(children: const <Widget>[Text('Panel principal')]),
     );
   }
 }

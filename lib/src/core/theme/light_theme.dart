@@ -32,6 +32,10 @@ class AppLightTheme {
         linearTrackColor: Constants.secondaryColor,
         trackGap: Constants.defaultPadding,
       ),
+      appBarTheme: const AppBarTheme(
+        backgroundColor: Constants.primaryColor,
+        titleTextStyle: TextStyle(color: Colors.white),
+      ),
     );
   }
 }
