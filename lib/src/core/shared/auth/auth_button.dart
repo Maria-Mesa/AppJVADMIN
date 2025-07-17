@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:helloworld/src/core/constants/constants.dart';
+import 'package:jvadmin/src/core/constants/constants.dart';
 
 class AuthButton extends StatelessWidget {
   const AuthButton({
@@ -14,14 +14,14 @@ class AuthButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DecoratedBox(
-      decoration: BoxDecoration(
-        color: Constants.primaryColor,
-        borderRadius: Constants.innerBorderRadius,
-        boxShadow: Constants.boxShadow,
-      ),
-      child: GestureDetector(
-        onTap: onTap,
+    return GestureDetector(
+      onTap: onTap,
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          color: Constants.primaryColor,
+          borderRadius: Constants.innerBorderRadius,
+          boxShadow: Constants.boxShadow,
+        ),
         child: Padding(
           padding: Constants.contentPadding,
           child: Center(

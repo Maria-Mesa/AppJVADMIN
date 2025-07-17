@@ -1,30 +1,30 @@
 import 'package:flutter/material.dart';
 
-class VentasPage extends StatefulWidget {
-  const VentasPage({super.key});
+class Sales extends StatefulWidget {
+  const Sales({super.key});
 
   @override
-  _VentasPageState createState() => _VentasPageState();
+  State<Sales> createState() => _SalesState();
 }
 
-class _VentasPageState extends State<VentasPage> {
-  List<String> ventas = <String>[];
+class _SalesState extends State<Sales> {
+  List<String> sales = <String>[];
 
   void eliminarVenta(int index) {
     setState(() {
-      ventas.removeAt(index);
+      sales.removeAt(index);
     });
   }
 
   void agregarVenta() {
     setState(() {
-      ventas.add('Venta nueva ${ventas.length + 1}');
+      sales.add('Venta nueva ${sales.length + 1}');
     });
   }
 
   void editarVenta(int index) {
     TextEditingController controller = TextEditingController(
-      text: ventas[index],
+      text: sales[index],
     );
 
     showDialog(
@@ -44,7 +44,7 @@ class _VentasPageState extends State<VentasPage> {
             child: const Text('Guardar'),
             onPressed: () {
               setState(() {
-                ventas[index] = controller.text;
+                sales[index] = controller.text;
               });
               Navigator.pop(context);
             },
@@ -62,9 +62,9 @@ class _VentasPageState extends State<VentasPage> {
         backgroundColor: const Color(0xFFDC1F26),
       ),
       body: ListView.builder(
-        itemCount: ventas.length,
+        itemCount: sales.length,
         itemBuilder: (BuildContext context, int index) => ListTile(
-          title: Text(ventas[index]),
+          title: Text(sales[index]),
           trailing: Row(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[

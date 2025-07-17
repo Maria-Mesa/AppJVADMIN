@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:helloworld/inventario.dart';
-import 'package:helloworld/proveedores.dart';
-import 'package:helloworld/src/features/accounting/presentation/page/accounting_page.dart';
-import 'package:helloworld/src/features/dashboard/presentation/page/dashboard.dart';
-import 'package:helloworld/ventas.dart';
 import 'package:hugeicons/hugeicons.dart';
+import 'package:jvadmin/src/features/accounting/presentation/page/accounting_page.dart';
+import 'package:jvadmin/src/features/dashboard/presentation/page/dashboard.dart';
+import 'package:jvadmin/src/features/inventory/presentation/page/inventory.dart';
+import 'package:jvadmin/src/features/providers/presentation/page/providers.dart';
+import 'package:jvadmin/src/features/sales/presentation/page/sales.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -17,8 +17,8 @@ class _HomeState extends State<Home> {
   int index = 0;
   final List<Widget> pages = <Widget>[
     const DashboardPage(),
-    const InventarioPage(),
-    const VentasPage(),
+    const Inventory(),
+    const Sales(),
     const ProveedoresPage(),
     const AccountingPage(),
   ];

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:helloworld/src/core/routes/app_routes.dart';
-import 'package:helloworld/src/core/theme/theme.dart';
+import 'package:jvadmin/src/core/routes/app_routes.dart';
+import 'package:jvadmin/src/core/theme/theme.dart';
 
 class JVAdminApp extends StatefulWidget {
   const JVAdminApp({super.key});

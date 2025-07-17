@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:helloworld/src/core/constants/constants.dart';
+import 'package:jvadmin/src/core/constants/constants.dart';
 
 class AppLightTheme {
   static ThemeData? _instance;

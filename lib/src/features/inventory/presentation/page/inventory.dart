@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
-class InventarioPage extends StatefulWidget {
-  const InventarioPage({super.key});
+
+class Inventory extends StatefulWidget {
+  const Inventory({super.key});
 
   @override
-  _InventarioPageState createState() => _InventarioPageState();
+  State<Inventory> createState() => _InventoryState();
 }
 
-class _InventarioPageState extends State<InventarioPage> {
+class _InventoryState extends State<Inventory> {
   List<String> productos = <String>[
     'Montura Ray-Ban',
     'Lente Blue Light',

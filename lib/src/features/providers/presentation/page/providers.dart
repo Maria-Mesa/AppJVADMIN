@@ -4,7 +4,7 @@ class ProveedoresPage extends StatefulWidget {
   const ProveedoresPage({super.key});
 
   @override
-  _ProveedoresPageState createState() => _ProveedoresPageState();
+  State<ProveedoresPage> createState() => _ProveedoresPageState();
 }
 
 class _ProveedoresPageState extends State<ProveedoresPage> {

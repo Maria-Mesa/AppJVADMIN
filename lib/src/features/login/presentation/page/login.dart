@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:helloworld/src/core/constants/constants.dart';
-import 'package:helloworld/src/core/shared/auth/auth_button.dart';
+import 'package:jvadmin/src/core/constants/constants.dart';
+import 'package:jvadmin/src/core/shared/auth/auth_button.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
