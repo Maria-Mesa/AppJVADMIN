@@ -57,10 +57,6 @@ class _SalesState extends State<Sales> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Ventas Registradas'),
-        backgroundColor: const Color(0xFFDC1F26),
-      ),
       body: ListView.builder(
         itemCount: sales.length,
         itemBuilder: (BuildContext context, int index) => ListTile(

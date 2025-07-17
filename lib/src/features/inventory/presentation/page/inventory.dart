@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Inventory extends StatefulWidget {
   const Inventory({super.key});
 
@@ -66,10 +65,6 @@ class _InventoryState extends State<Inventory> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Inventario'),
-        backgroundColor: const Color(0xFFDC1F26),
-      ),
       body: ListView.builder(
         itemCount: productos.length,
         itemBuilder: (BuildContext context, int index) {
@@ -92,8 +87,8 @@ class _InventoryState extends State<Inventory> {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: const Color(0xFFDC1F26),
         onPressed: agregarProducto,
+        tooltip: 'Agregar producto',
         child: const Icon(Icons.add),
       ),
     );

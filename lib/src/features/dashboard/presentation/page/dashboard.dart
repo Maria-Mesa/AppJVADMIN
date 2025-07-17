@@ -7,28 +7,6 @@ class DashboardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[100],
-      appBar: AppBar(
-        backgroundColor: const Color(0xFFDC1F26),
-        title: const Row(
-          children: <Widget>[
-            CircleAvatar(
-              backgroundImage: AssetImage('assets/logo.png'),
-              backgroundColor: Colors.white,
-              radius: 18,
-            ),
-            SizedBox(width: 10),
-            Text('JV ADMIN'),
-          ],
-        ),
-        actions: <Widget>[
-          IconButton(icon: const Icon(Icons.notifications), onPressed: () {}),
-          const CircleAvatar(
-            backgroundColor: Colors.white,
-            child: Text('MF', style: TextStyle(color: Color(0xFFDC1F26))),
-          ),
-          const SizedBox(width: 12),
-        ],
-      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView(

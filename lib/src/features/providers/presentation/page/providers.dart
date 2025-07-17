@@ -1,30 +1,30 @@
 import 'package:flutter/material.dart';
 
-class ProveedoresPage extends StatefulWidget {
-  const ProveedoresPage({super.key});
+class Providers extends StatefulWidget {
+  const Providers({super.key});
 
   @override
-  State<ProveedoresPage> createState() => _ProveedoresPageState();
+  State<Providers> createState() => _ProvidersState();
 }
 
-class _ProveedoresPageState extends State<ProveedoresPage> {
-  List<String> proveedores = <String>[];
+class _ProvidersState extends State<Providers> {
+  List<String> providers = <String>[];
 
   void eliminarProveedor(int index) {
     setState(() {
-      proveedores.removeAt(index);
+      providers.removeAt(index);
     });
   }
 
   void agregarProveedor() {
     setState(() {
-      proveedores.add('Proveedor ${proveedores.length + 1}');
+      providers.add('Proveedor ${providers.length + 1}');
     });
   }
 
   void editarProveedor(int index) {
     TextEditingController controller = TextEditingController(
-      text: proveedores[index],
+      text: providers[index],
     );
 
     showDialog(
@@ -43,7 +43,7 @@ class _ProveedoresPageState extends State<ProveedoresPage> {
           ElevatedButton(
             onPressed: () {
               setState(() {
-                proveedores[index] = controller.text;
+                providers[index] = controller.text;
               });
               Navigator.pop(context);
             },
@@ -57,14 +57,10 @@ class _ProveedoresPageState extends State<ProveedoresPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Proveedores'),
-        backgroundColor: const Color(0xFFDC1F26),
-      ),
       body: ListView.builder(
-        itemCount: proveedores.length,
+        itemCount: providers.length,
         itemBuilder: (BuildContext context, int index) => ListTile(
-          title: Text(proveedores[index]),
+          title: Text(providers[index]),
           trailing: Row(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
