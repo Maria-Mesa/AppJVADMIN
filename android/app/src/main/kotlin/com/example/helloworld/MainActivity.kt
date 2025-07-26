@@ -1,4 +1,4 @@
-package com.example.helloworld
+package com.maridev.jvadmin
 
 import io.flutter.embedding.android.FlutterActivity
 
